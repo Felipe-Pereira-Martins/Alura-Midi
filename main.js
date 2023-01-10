@@ -3,35 +3,23 @@
     document.querySelector(idElementoAudio).play();
 
     }
-
-
-    //Refêrencias
+    //Refêrencia
+    
     const listaDeTeclas = document.querySelectorAll('.tecla');
 
     //Tocando som POM
 
-    let contador = 0;
 
-    //enquanto, trabalhando com while
+    //para
 
-    while (contador < listaDeTeclas.length) {
+     for (let contador = 0 ; contador < listaDeTeclas.length; contador++) {
 
         const tecla = listaDeTeclas[contador];
-
         const instrumento = tecla.classList[1];
-
-        //console.log (instrumento)
-
-        // Template string
-        const idAudio = `#som_${instrumento}`;
-
-        //'#som_(instrumento)'
+        const idAudio = `#som_${instrumento}`; // Template string
 
         tecla.onclick = function () {
             tocaSom(idAudio);
+        }  //Adicionando sons em todas as teclas
 
-        };  //Adicionando sons em todas as teclas
-
-        contador = contador + 1;  
-        //console.log(contador);
     }
