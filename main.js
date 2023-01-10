@@ -1,8 +1,9 @@
-    function tocaSomPom () {
+    function tocaSom (idElementoAudio) { //Função com parâmetros
 
-    document.querySelector('#som_tecla_pom').play();
+    document.querySelector(idElementoAudio).play();
 
     }
+
 
     //Refêrencias
     const listaDeTeclas = document.querySelectorAll('.tecla');
@@ -15,7 +16,7 @@
 
     while (contador < listaDeTeclas.length) {
 
-        listaDeTeclas[contador].onclick = tocaSomPom; //Adicionando sons em todas as teclas
+        listaDeTeclas[contador].onclick = tocaSom; //Adicionando sons em todas as teclas
         contador = contador + 1;  
 
     }
