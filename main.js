@@ -16,7 +16,10 @@
 
     while (contador < listaDeTeclas.length) {
 
-        listaDeTeclas[contador].onclick = tocaSom; //Adicionando sons em todas as teclas
+        listaDeTeclas[contador].onclick = function () {
+            tocaSom('#som_tecla_pom')
+        };  //Adicionando sons em todas as teclas
+
         contador = contador + 1;  
 
     }
