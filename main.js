@@ -22,4 +22,8 @@
             tocaSom(idAudio);
         }  //Adicionando sons em todas as teclas
 
+        tecla.onkeydown = function () {
+            tecla.classList.add('ativa');
+        }
+
     }
