@@ -1,18 +1,19 @@
     function tocaSom (seletorAudio) { //Função com parâmetros
      const elemento = document.querySelector(seletorAudio);
     
-        if (elemento === null) {
-            //alert('Elemento nao encontrdo')
-            console.log('Elemento nao encontrado')
-    }   
-
-        if (elemento != null) {
-
-            if (elemento.localName === 'audio') {
+        if (elemento && elemento.localName === 'audio') {
             elemento.play();
-            }   
+
+            } 
+
+        else {
+            //alert('Elemento nao encontrdo')
+            console.log('Elemento não encontrado ou seletor inválido');
+            
+        }
+
         }   
-    }
+    
 
     //Refêrencia
     
