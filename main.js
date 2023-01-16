@@ -1,6 +1,5 @@
-    function tocaSom (idElementoAudio) { //Função com parâmetros
-
-    document.querySelector(idElementoAudio).play();
+    function tocaSom (seletorAudio) { //Função com parâmetros
+      document.querySelector(idElementoAudio);
 
     }
     //Refêrencia
@@ -8,7 +7,6 @@
     const listaDeTeclas = document.querySelectorAll('.tecla');
 
     //Tocando som POM
-
 
     //para
 
@@ -22,8 +20,16 @@
             tocaSom(idAudio);
         }  //Adicionando sons em todas as teclas
 
-        tecla.onkeydown = function () {
-            tecla.classList.add('ativa');
-        }
+        tecla.onkeydown = function (event) { //Adicionando
 
+            if (event.code === 'Space' || event.code === 'Enter' ) { //Estrutura de condicoes if e elser
+                tecla.classList.add('ativa');
+            }
+
+        }    
+
+
+        tecla.onkeyup = function () { //Removendo
+            tecla.classList.remove('ativa');
+        }
     }
